@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Samarth Jain" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <div id="overlay">
+      <div id="box">
+        <input type="text" name="name" id="name" placeholder="Enter your name here..." class="px-3 py-2"><br>
+        <button id="getIntoChat">Get into chat</button>
+      </div>
+    </div>
+
+    <div id="sj-main">
+      <div id="section1">
+        <div id="chatBox" class="me-2">
+          <img src="/images/sj.png" alt="" />
+        </div>
+
+        <div id="onlineStatus">
+          <h5 class="text-center ms-2">Online</h5> <hr />
+        </div>
+      </div>
+
+      <h6 id="typing"></h6> <br />
+
+      <textarea name="msg" id="msg" rows="3" placeholder="Type your message here..." style="resize: none; padding: 5px 10px; border-radius: 10px" ></textarea ><br />
+
+      <button class="btn btn-primary w-25 align-self-center" id="sendMsg"> Send Message </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" ></script>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous" ></script>
+    <script src="/javascripts/index.js"></script>
+  </body>
+</html>

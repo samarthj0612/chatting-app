@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 999;
+  background-color: rgba(68, 68, 68, 0.858);
+  color: white;
+}
+#overlay #box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.402);
+  padding: 30px;
+  border-radius: 20px;
+}
+#sj-main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+#section1 {
+  position: relative;
+  height: 75%;
+  width: 100%;
+  display: flex;
+}
+#chatBox {
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+  width: 70%;
+  /* border: 1px solid #999; */
+  overflow-y: auto;
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 10px;
+}
+#chatBox::-webkit-scrollbar {
+  width: 10px;
+}
+#chatBox::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.388);
+  border-radius: 20px;
+}
+#chatBox img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#chat {
+  position: relative;
+  background-color: rgba(153, 153, 153, 0.687);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  z-index: 99;
+  border: 1px solid rgba(0, 0, 0, 0.493);
+}
+#chatBox #asd {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  bottom: 25%;
+  left: 30%;
+  z-index: 99999;
+}
+#onlineStatus {
+  border-radius: 0px 5px 10px 0px;
+  height: 100%;
+  width: 30%;
+  background-color: #f0cacf;
+  padding: 20px;
+  overflow-y: auto;
+}
+#onlineStatus::-webkit-scrollbar {
+  width: 10px;
+}
+#onlineStatus::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.388);
+  border-radius: 20px;
+}
+#onlineStatus h6 {
+  margin-left: 30px;
+  position: relative;
+}
+#onlineStatus h6::before {
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translate(0%, -50%);
+  animation: colour 2s linear infinite both;
+}
+
+@keyframes colour {
+  0% {
+    background-color: green;
+  }
+  50% {
+    background-color: rgb(3, 181, 3);
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+#typing {
+  text-align: center;
+  margin-bottom: 0px;
+}
